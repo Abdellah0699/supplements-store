@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.homeTitle">Your Supplement Store — Quality Supplements, Delivered in Algeria</title>
+  <meta name="description" content="Protein, creatine, vitamins and more. Order directly from the product page, pay on delivery, anywhere in Algeria." data-i18n-content="meta.homeDescription">
+  <script>
+    (function () {
+      try {
+        var lang = localStorage.getItem('siteLang');
+        if (lang === 'ar') { document.documentElement.lang = 'ar'; document.documentElement.dir = 'rtl'; }
+        else if (lang === 'fr') { document.documentElement.lang = 'fr'; }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/rtl.css">
+</head>
+<body data-page="home">
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header">
+    <div class="container site-header__bar">
+      <button class="site-header__menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg width="22" height="22"><use href="assets/icons/sprite.svg#icon-menu"></use></svg>
+      </button>
+
+      <a class="site-header__logo" href="index.html" aria-label="Homepage" data-i18n-aria-label="header.homepageLabel">
+        <img src="assets/images/logo/logo.png" alt="Store logo" data-i18n-alt="header.logoAlt">
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page" data-i18n="nav.home">Home</a>
+        <a href="#categories" data-i18n="nav.categories">Categories</a>
+        <a href="#popular" data-i18n="nav.products">Products</a>
+        <a href="pages/search.html" data-i18n="nav.search">Search</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <form class="site-header__search" data-search-form role="search">
+          <svg width="16" height="16"><use href="assets/icons/sprite.svg#icon-search"></use></svg>
+          <input type="search" name="q" placeholder="Search products..." aria-label="Search products" data-i18n-placeholder="header.searchPlaceholder" data-i18n-aria-label="header.searchPlaceholder">
+        </form>
+        <a class="site-header__icon-btn" href="pages/search.html" aria-label="Search products" data-i18n-aria-label="header.searchPlaceholder">
+          <svg width="20" height="20"><use href="assets/icons/sprite.svg#icon-search"></use></svg>
+        </a>
+        <button type="button" class="lang-switcher" data-lang-switcher>Français</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============== MOBILE NAV DRAWER ============== -->
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav__backdrop"></div>
+    <div class="mobile-nav__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="mobile-nav__header">
+        <img src="assets/images/logo/logo.png" alt="Store logo" style="height:26px;" data-i18n-alt="header.logoAlt">
+        <button class="mobile-nav__close" aria-label="Close menu" data-i18n-aria-label="header.closeMenu">
+          <svg width="22" height="22"><use href="assets/icons/sprite.svg#icon-close"></use></svg>
+        </button>
+      </div>
+      <ul class="mobile-nav__links">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="#categories" data-i18n="nav.categories">Categories</a></li>
+        <li><a href="#popular" data-i18n="nav.products">Products</a></li>
+        <li><a href="pages/search.html" data-i18n="nav.search">Search</a></li>
+      </ul>
+      <form class="mobile-nav__search" data-search-form role="search">
+        <input type="search" name="q" placeholder="Search products..." aria-label="Search products" data-i18n-placeholder="header.searchPlaceholder" data-i18n-aria-label="header.searchPlaceholder">
+        <button type="submit" aria-label="Search">
+          <svg width="18" height="18"><use href="assets/icons/sprite.svg#icon-search"></use></svg>
+        </button>
+      </form>
+      <button type="button" class="lang-switcher mobile-nav__lang-switcher" data-lang-switcher>Français</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- ============== HERO ============== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__media">
+              <div class="hero-carousel" id="hero-carousel" role="region" aria-roledescription="carousel" aria-label="Featured images">
+                <div class="hero-carousel__track">
+                  <div class="hero-carousel__slide">
+                    <picture>
+                    <source media="(max-width: 768px)" srcset="assets/images/banners/hero-slide-1-mobile.png">
+                    <img src="assets/images/banners/hero-slide-1.png" alt="" loading="eager" draggable="false">
+                    </picture>
+                  </div>
+                  <div class="hero-carousel__slide">
+                    <picture>
+                    <source media="(max-width: 768px)" srcset="assets/images/banners/hero-slide-2-mobile.png">
+                    <img src="assets/images/banners/hero-slide-2.png" alt="" loading="eager" draggable="false">
+                    </picture>
+                  </div>
+                  <div class="hero-carousel__slide"><img src="assets/images/banners/hero-slide-3.png" alt="" loading="lazy" draggable="false"></div>
+                </div>
+                <div class="hero-carousel__dots">
+                  <button type="button" class="hero-carousel__dot" aria-label="Show slide 1" aria-selected="true"></button>
+                  <button type="button" class="hero-carousel__dot" aria-label="Show slide 2" aria-selected="false"></button>
+                  <button type="button" class="hero-carousel__dot" aria-label="Show slide 3" aria-selected="false"></button>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== CATEGORIES ============== -->
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title" data-i18n="sections.shopByCategory">Shop by Category</h2>
+        </div>
+        <div class="category-strip" id="home-category-strip" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ============== POPULAR ============== -->
+    <section class="section" id="popular">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title" data-i18n="sections.popularProducts">Popular Products</h2>
+          <a class="section__link" href="pages/search.html" data-i18n="sections.seeAll">See all</a>
+        </div>
+        <div class="product-grid" id="home-popular-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ============== FEATURED ============== -->
+    <section class="section" id="featured">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title" data-i18n="sections.recommendedForYou">Recommended for You</h2>
+        </div>
+        <div class="product-rail" id="home-featured-rail" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ============== WHY SHOP WITH US ============== -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title" data-i18n="sections.whyShopWithUs">Why Shop With Us</h2>
+        </div>
+        <div class="perks">
+          <div class="perk">
+            <p class="perk__title" data-i18n="perks.qualityTitle">Quality Products</p>
+            <p class="perk__text" data-i18n="perks.qualityText">Carefully selected supplements.</p>
+          </div>
+          <div class="perk">
+            <p class="perk__title" data-i18n="perks.deliveryTitle">Fast Delivery</p>
+            <p class="perk__text" data-i18n="perks.deliveryText">Delivery across Algeria.</p>
+          </div>
+          <div class="perk">
+            <p class="perk__title" data-i18n="perks.orderingTitle">Easy Ordering</p>
+            <p class="perk__text" data-i18n="perks.orderingText">Order directly from the product page.</p>
+          </div>
+          <div class="perk">
+            <p class="perk__title" data-i18n="perks.supportTitle">Customer Support</p>
+            <p class="perk__text" data-i18n="perks.supportText">We're here to help.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== CTA BAND ============== -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <p class="cta-band__title" data-i18n="cta.title">Not sure where to start?</p>
+            <p class="cta-band__text" data-i18n="cta.text">Browse products by category and order directly from the product page.</p>
+          </div>
+          <a href="#categories" class="btn btn-primary" data-i18n="hero.exploreCategories">Explore Categories</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container site-footer__top">
+      <div class="site-footer__col--brand">
+        <img src="assets/images/logo/logo.jpg" alt="Store logo" data-i18n-alt="header.logoAlt">
+      </div>
+      <div>
+        <p class="site-footer__heading" data-i18n="footer.navigate">Navigate</p>
+        <ul class="site-footer__links">
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="#categories" data-i18n="nav.categories">Categories</a></li>
+          <li><a href="#popular" data-i18n="nav.products">Products</a></li>
+          <li><a href="pages/search.html" data-i18n="nav.search">Search</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col--categories">
+        <p class="site-footer__heading" data-i18n="footer.categoriesHeading">Categories</p>
+        <ul class="site-footer__links">
+          <li><a href="pages/category.html?id=protein" data-i18n="categoryNames.protein">Protein</a></li>
+          <li><a href="pages/category.html?id=creatine" data-i18n="categoryNames.creatine">Creatine</a></li>
+          <li><a href="pages/category.html?id=vitamins" data-i18n="categoryNames.vitamins">Vitamins</a></li>
+          <li><a href="pages/category.html?id=pre-workout" data-i18n="categoryNames.pre-workout">Pre-Workout</a></li>
+          <li><a href="pages/category.html?id=wellness" data-i18n="categoryNames.wellness">Health &amp; Wellness</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="site-footer__heading" data-i18n="footer.contact">Contact</p>
+        <ul class="site-footer__links">
+          <li><span data-i18n="footer.phoneLabel">Phone:</span> +213 XX XX XX XX</li>
+          <div class="site-footer__social">
+            <a href="https://www.instagram.com/nutriforge10/" aria-label="Instagram" target="_blank" rel="noopener"><img src="assets/icons/instagram.png" alt="" width="30" height="30"></a>
+            <a href="https://www.tiktok.com/@slimane_nutri" aria-label="TikTok" target="_blank" rel="noopener"><img src="assets/icons/tiktok.png" alt="" width="30" height="30"></a>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div class="container site-footer__bottom">
+      <span>&copy; <span id="footer-year"></span> <span data-i18n="footer.storeName">Your Supplement Store</span>. <span data-i18n="footer.rights">All rights reserved.</span></span>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/categories.js"></script>
+  <script src="js/app.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

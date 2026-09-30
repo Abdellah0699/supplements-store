@@ -1,0 +1,74 @@
+{
+  "categories": [
+    {
+      "id": "protein",
+      "name": "Protein",
+      "slug": "protein",
+      "icon": "protein",
+      "description": "Whey, casein and blends to help you meet your daily protein target."
+    },
+    {
+      "id": "creatine",
+      "name": "Creatine",
+      "slug": "creatine",
+      "icon": "creatine",
+      "description": "Monohydrate and buffered creatine for strength and power training."
+    },
+    {
+      "id": "vitamins",
+      "name": "Vitamins",
+      "slug": "vitamins",
+      "icon": "vitamins",
+      "description": "Daily multivitamins and single vitamins to round out your diet."
+    },
+    {
+      "id": "minerals",
+      "name": "Minerals",
+      "slug": "minerals",
+      "icon": "minerals",
+      "description": "Magnesium, zinc and mineral blends for recovery and sleep."
+    },
+    {
+      "id": "pre-workout",
+      "name": "Pre-Workout",
+      "slug": "pre-workout",
+      "icon": "pre-workout",
+      "description": "Energy and focus formulas to take before training."
+    },
+    {
+      "id": "mass-gainers",
+      "name": "Mass Gainers",
+      "slug": "mass-gainers",
+      "icon": "mass-gainers",
+      "description": "High-calorie blends for those looking to build size."
+    },
+    {
+      "id": "amino-acids",
+      "name": "Amino Acids",
+      "slug": "amino-acids",
+      "icon": "amino-acids",
+      "description": "BCAA, EAA and glutamine for recovery between sessions."
+    },
+    {
+      "id": "fat-burners",
+      "name": "Fat Burners",
+      "slug": "fat-burners",
+      "icon": "fat-burners",
+      "description": "Thermogenic and stimulant-based formulas to support cutting phases."
+    },
+    {
+      "id": "wellness",
+      "name": "Health & Wellness",
+      "slug": "wellness",
+      "icon": "wellness",
+      "description": "Omega-3, hydration and everyday wellness essentials."
+    },
+    {
+      "id": "accessories",
+      "name": "Accessories",
+      "slug": "accessories",
+      "icon": "accessories",
+      "description": "Shakers, scoops and the small gear that makes supplementing easier."
+    }
+  ]
+}

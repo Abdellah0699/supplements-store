@@ -1,0 +1,63 @@
+/* =========================================================
+   rtl.css — overrides applied only when <html dir="rtl">
+   (Arabic). Loaded last so it wins over the base stylesheets.
+   Most of the layout mirrors automatically because flexbox and
+   grid respect `direction` - this file only fixes the handful
+   of physical left/right values that don't.
+   ========================================================= */
+
+[dir="rtl"] body {
+  font-family: 'Tajawal', var(--font-body);
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] .btn,
+[dir="rtl"] .hero__badge {
+  font-family: 'Tajawal', var(--font-display);
+}
+
+/* Header: the menu button hugs the header's edge with a negative
+   margin: needs to hug the other edge in RTL. */
+[dir="rtl"] .site-header__menu-btn {
+  margin-left: 0;
+  margin-right: -8px;
+}
+
+/* Pushes the search/menu icons to the far edge once the nav links
+   are hidden on mobile - the far edge is now the left. */
+[dir="rtl"] .site-header__actions {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Mobile nav drawer slides from the edge the menu button sits on. */
+[dir="rtl"] .mobile-nav__panel {
+  left: auto;
+  right: 0;
+}
+
+/* Discount/out-of-stock badge on product cards. */
+[dir="rtl"] .product-card__badge {
+  left: auto;
+  right: 10px;
+}
+
+/* Bullet list indentation in the product info tabs (Benefits list). */
+[dir="rtl"] .tabs__panel ul {
+  padding-left: 0;
+  padding-right: 18px;
+}
+
+/* Text blocks that were explicitly left-aligned for the LTR layout. */
+[dir="rtl"] .order-success__summary {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  [dir="rtl"] .cta-band {
+    text-align: right;
+  }
+}
