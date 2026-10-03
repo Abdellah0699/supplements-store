@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search | Your Supplement Store</title>
+  <script>
+    (function () {
+      try {
+        var lang = localStorage.getItem('siteLang');
+        if (lang === 'ar') { document.documentElement.lang = 'ar'; document.documentElement.dir = 'rtl'; }
+        else if (lang === 'fr') { document.documentElement.lang = 'fr'; }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/rtl.css">
+</head>
+<body data-page="search">
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header">
+    <div class="container site-header__bar">
+      <button class="site-header__menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg width="22" height="22"><use href="../assets/icons/sprite.svg#icon-menu"></use></svg>
+      </button>
+
+      <a class="site-header__logo" href="../index.html" aria-label="Homepage" data-i18n-aria-label="header.homepageLabel">
+        <img src="../assets/images/logo/logo.png" alt="Store logo" data-i18n-alt="header.logoAlt">
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html" data-i18n="nav.home">Home</a>
+        <a href="../index.html#categories" data-i18n="nav.categories">Categories</a>
+        <a href="../index.html#popular" data-i18n="nav.products">Products</a>
+        <a href="search.html" aria-current="page" data-i18n="nav.search">Search</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <form class="site-header__search" data-search-form role="search">
+          <svg width="16" height="16"><use href="../assets/icons/sprite.svg#icon-search"></use></svg>
+          <input type="search" name="q" placeholder="Search products..." aria-label="Search products" data-i18n-placeholder="header.searchPlaceholder" data-i18n-aria-label="header.searchPlaceholder">
+        </form>
+        <a class="site-header__icon-btn" href="search.html" aria-label="Search products" data-i18n-aria-label="header.searchPlaceholder">
+          <svg width="20" height="20"><use href="../assets/icons/sprite.svg#icon-search"></use></svg>
+        </a>
+        <button type="button" class="lang-switcher" data-lang-switcher>Français</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============== MOBILE NAV DRAWER ============== -->
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav__backdrop"></div>
+    <div class="mobile-nav__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="mobile-nav__header">
+        <img src="../assets/images/logo/logo.png" alt="Store logo" style="height:26px;" data-i18n-alt="header.logoAlt">
+        <button class="mobile-nav__close" aria-label="Close menu" data-i18n-aria-label="header.closeMenu">
+          <svg width="22" height="22"><use href="../assets/icons/sprite.svg#icon-close"></use></svg>
+        </button>
+      </div>
+      <ul class="mobile-nav__links">
+        <li><a href="../index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="../index.html#categories" data-i18n="nav.categories">Categories</a></li>
+        <li><a href="../index.html#popular" data-i18n="nav.products">Products</a></li>
+        <li><a href="search.html" data-i18n="nav.search">Search</a></li>
+      </ul>
+      <form class="mobile-nav__search" data-search-form role="search">
+        <input type="search" name="q" placeholder="Search products..." aria-label="Search products" data-i18n-placeholder="header.searchPlaceholder" data-i18n-aria-label="header.searchPlaceholder">
+        <button type="submit" aria-label="Search">
+          <svg width="18" height="18"><use href="../assets/icons/sprite.svg#icon-search"></use></svg>
+        </button>
+      </form>
+      <button type="button" class="lang-switcher mobile-nav__lang-switcher" data-lang-switcher>Français</button>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+      <div class="section" style="padding-bottom:0;">
+        <h1 class="section__title" style="margin-bottom:16px;" data-i18n="search.title">Search</h1>
+        <form id="search-page-form" style="display:flex;gap:10px;max-width:480px;">
+          <input class="input" type="search" id="search-page-input" placeholder="Search products..." aria-label="Search products" data-i18n-placeholder="header.searchPlaceholder" data-i18n-aria-label="header.searchPlaceholder">
+          <button type="submit" class="btn btn-primary" data-i18n="search.button">Search</button>
+        </form>
+      </div>
+
+      <div class="section">
+        <p id="search-prompt" class="empty-state" hidden>
+          <span class="empty-state__title" style="display:block;" data-i18n="search.promptTitle">Search for a product</span>
+          <span id="search-prompt-text">Try "protein", "creatine" or a category name.</span>
+        </p>
+
+        <div id="search-loading" hidden>
+          <p class="toolbar__count" style="margin-bottom:16px;" data-i18n="search.searching">Searching...</p>
+          <div class="product-grid" id="search-loading-grid">
+            <div class="skeleton" style="aspect-ratio:4/3;"></div>
+            <div class="skeleton" style="aspect-ratio:4/3;"></div>
+            <div class="skeleton" style="aspect-ratio:4/3;"></div>
+          </div>
+        </div>
+
+        <p class="toolbar__count" id="search-count" style="margin-bottom:16px;"></p>
+        <div class="product-grid" id="search-results-grid" aria-live="polite"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container site-footer__top">
+      <div class="site-footer__col--brand">
+        <img src="../assets/images/logo/logo.jpg" alt="Store logo" data-i18n-alt="header.logoAlt">
+      </div>
+      <div>
+        <p class="site-footer__heading" data-i18n="footer.navigate">Navigate</p>
+        <ul class="site-footer__links">
+          <li><a href="../index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="../index.html#categories" data-i18n="nav.categories">Categories</a></li>
+          <li><a href="../index.html#popular" data-i18n="nav.products">Products</a></li>
+          <li><a href="search.html" data-i18n="nav.search">Search</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col--categories">
+        <p class="site-footer__heading" data-i18n="footer.categoriesHeading">Categories</p>
+        <ul class="site-footer__links">
+          <li><a href="category.html?id=protein" data-i18n="categoryNames.protein">Protein</a></li>
+          <li><a href="category.html?id=creatine" data-i18n="categoryNames.creatine">Creatine</a></li>
+          <li><a href="category.html?id=vitamins" data-i18n="categoryNames.vitamins">Vitamins</a></li>
+          <li><a href="category.html?id=pre-workout" data-i18n="categoryNames.pre-workout">Pre-Workout</a></li>
+          <li><a href="category.html?id=wellness" data-i18n="categoryNames.wellness">Health &amp; Wellness</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="site-footer__heading" data-i18n="footer.contact">Contact</p>
+        <ul class="site-footer__links">
+          <li><span data-i18n="footer.phoneLabel">Phone:</span> +213 XX XX XX XX</li>
+          <div class="site-footer__social">
+            <a href="https://www.instagram.com/nutriforge10/" aria-label="Instagram" target="_blank" rel="noopener"><img src="../assets/icons/instagram.png" alt="" width="30" height="30"></a>
+            <a href="https://www.tiktok.com/@slimane_nutri" aria-label="TikTok" target="_blank" rel="noopener"><img src="../assets/icons/tiktok.png" alt="" width="30" height="30"></a>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div class="container site-footer__bottom">
+      <span>&copy; <span id="footer-year"></span> <span data-i18n="footer.storeName">Your Supplement Store</span>. <span data-i18n="footer.rights">All rights reserved.</span></span>
+
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/products.js"></script>
+  <script src="../js/categories.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/search.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

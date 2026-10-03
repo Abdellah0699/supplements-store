@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Received | Your Supplement Store</title>
+  <script>
+    (function () {
+      try {
+        var lang = localStorage.getItem('siteLang');
+        if (lang === 'ar') { document.documentElement.lang = 'ar'; document.documentElement.dir = 'rtl'; }
+        else if (lang === 'fr') { document.documentElement.lang = 'fr'; }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/checkout.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/rtl.css">
+</head>
+<body data-page="order-success">
+
+  <!-- ============== HEADER (minimal) ============== -->
+  <header class="site-header">
+    <div class="container site-header__bar">
+      <a class="site-header__logo" href="../index.html" aria-label="Homepage" data-i18n-aria-label="header.homepageLabel">
+        <img src="../assets/images/logo/logo.png" alt="Store logo" data-i18n-alt="header.logoAlt">
+      </a>
+      <div class="site-header__actions">
+        <button type="button" class="lang-switcher" data-lang-switcher>Français</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="order-success">
+        <div class="order-success__icon">
+          <svg width="30" height="30"><use href="../assets/icons/sprite.svg#icon-check-circle"></use></svg>
+        </div>
+        <h1 class="order-success__title" data-i18n="orderSuccess.title">Order Received</h1>
+        <p class="order-success__text" data-i18n="orderSuccess.thankYou">Thank you for your order.</p>
+        <p class="order-success__text" data-i18n="orderSuccess.willContact">We will contact you on your phone number to confirm the order.</p>
+
+        <div class="order-success__ref" id="order-reference" hidden></div>
+
+        <div class="summary-box order-success__summary" id="order-summary" hidden></div>
+
+        <a href="../index.html" class="btn btn-primary btn-lg" data-i18n="orderSuccess.continueShopping">Continue Shopping</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/products.js"></script>
+  <script>
+    (function () {
+      const raw = sessionStorage.getItem('lastOrder');
+      if (!raw) return;
+      try {
+        const { orderId, order } = JSON.parse(raw);
+        const refEl = document.getElementById('order-reference');
+        refEl.textContent = `${I18N.t('orderSuccess.orderRefPrefix')}${orderId}`;
+        refEl.hidden = false;
+
+        const methodLabel = order.delivery.method === 'home_delivery'
+          ? I18N.t('orderForm.homeDelivery')
+          : I18N.t('orderForm.pickupPoint');
+
+        const summaryEl = document.getElementById('order-summary');
+        summaryEl.innerHTML = `
+          <div class="summary-row"><span><bdi>${order.quantity} x ${order.productName}</bdi></span><span><bdi>${Products.formatPrice(order.subtotal)}</bdi></span></div>
+          <div class="summary-row"><span>${I18N.t('orderForm.delivery')} (${methodLabel})</span><span>${order.delivery.fee ? `<bdi>${Products.formatPrice(order.delivery.fee)}</bdi>` : I18N.t('orderForm.free')}</span></div>
+          <div class="summary-row summary-row--total"><span>${I18N.t('orderForm.total')}</span><span><bdi>${Products.formatPrice(order.total)}</bdi></span></div>
+        `;
+        summaryEl.hidden = false;
+
+        sessionStorage.removeItem('lastOrder');
+      } catch (err) {
+        // no-op: page still works without the summary
+      }
+    })();
+  </script>
+</body>
+</html>

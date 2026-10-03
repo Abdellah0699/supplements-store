@@ -1,0 +1,118 @@
+/* =========================================================
+   product.css — product detail page
+   ========================================================= */
+
+.product-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 40px;
+  padding: 20px 0 8px;
+  align-items: start;
+}
+
+.product-layout__gallery {
+  position: sticky;
+  top: calc(var(--header-height) + 20px);
+}
+
+.product-gallery__main {
+  aspect-ratio: 1 / 1;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.product-gallery__main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-layout__info {
+  padding-bottom: 16px;
+}
+
+.product-info__category {
+  font-size: 0.85rem;
+  color: var(--color-slate);
+  margin-bottom: 6px;
+}
+
+.product-info__category a:hover {
+  color: var(--color-green-dark);
+}
+
+.product-info__name {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.product-info__price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.product-info__discount {
+  background: var(--color-gold);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.product-info__availability {
+  margin: 10px 0 18px;
+}
+
+.product-info__short {
+  font-size: 0.98rem;
+  color: var(--color-ink);
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.product-info__variant-block {
+  margin-bottom: 18px;
+}
+
+.product-info__variant-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Info tabs live under the two-column layout, full width */
+.product-tabs {
+  border-top: 1px solid var(--color-border);
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+/* Related products */
+.related-products {
+  border-top: 1px solid var(--color-border);
+  padding-top: 8px;
+}
+
+@media (max-width: 1024px) {
+  .product-layout__gallery {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-info__name {
+    font-size: 1.3rem;
+  }
+
+  .product-layout {
+    gap: 24px;
+    padding-top: 12px;
+  }
+}
