@@ -1,0 +1,6 @@
+<svg width="220" height="64" viewBox="0 0 220 64" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(4,14)" stroke="#2F6F4E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <svg width="36" height="36" viewBox="0 0 24 24"><path d="M12 20s-7-4.35-7-9.5A4.5 4.5 0 0 1 9.5 6 4 4 0 0 1 12 7.5 4 4 0 0 1 14.5 6 4.5 4.5 0 0 1 19 10.5C19 15.65 12 20 12 20z"/></svg>
+  </g>
+  <text x="48" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1B2A22">Your Logo</text>
+</svg>

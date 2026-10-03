@@ -1,0 +1,365 @@
+{
+  "products": [
+    {
+      "id": "prod-001",
+      "name": "Whey Protein Isolate",
+      "slug": "whey-protein-isolate",
+      "categoryId": "protein",
+      "price": 8500,
+      "oldPrice": 9500,
+      "currency": "DZD",
+      "image": "assets/images/products/whey-isolate.jpg",
+      "shortDescription": "Fast-absorbing whey isolate with 27g of protein per scoop.",
+      "description": "A low-carb, low-fat whey protein isolate designed to help you reach your daily protein target without a lot of extra calories. Mixes easily in water or milk.",
+      "benefits": [
+        "27g of protein per serving",
+        "Low in sugar and fat",
+        "Mixes easily with a shaker"
+      ],
+      "usage": "Mix 1 scoop (30g) with 200-250ml of water or milk. Take after training or between meals.",
+      "available": true,
+      "featured": true,
+      "flavors": [
+        "Chocolate",
+        "Vanilla",
+        "Strawberry"
+      ]
+    },
+    {
+      "id": "prod-002",
+      "name": "Whey Protein Concentrate",
+      "slug": "whey-protein-concentrate",
+      "categoryId": "protein",
+      "price": 6800,
+      "oldPrice": null,
+      "currency": "DZD",
+      "image": "assets/images/products/whey-concentrate.jpg",
+      "shortDescription": "Everyday whey blend for building and maintaining muscle.",
+      "description": "A classic whey concentrate that covers your daily protein needs at an accessible price. A solid everyday option alongside a balanced diet.",
+      "benefits": [
+        "22g of protein per serving",
+        "Smooth, easy-mixing texture",
+        "Great value for daily use"
+      ],
+      "usage": "Mix 1 scoop (33g) with 250ml of water or milk, 1-2 times per day.",
+      "available": true,
+      "featured": false,
+      "flavors": [
+        "Chocolate",
+        "Vanilla"
+      ]
+    },
+    {
+      "id": "prod-003",
+      "name": "Casein Protein Night",
+      "slug": "casein-protein-night",
+      "categoryId": "protein",
+      "price": 8900,
+      "oldPrice": null,
+      "currency": "DZD",
+      "image": "assets/images/products/casein.jpg",
+      "shortDescription": "Slow-digesting protein, best taken before bed.",
+      "description": "Micellar casein digests slowly, making it a popular choice in the evening or during longer gaps between meals.",
+      "benefits": [
+        "Slow-release protein",
+        "24g per serving",
+        "Thicker, pudding-like texture"
+      ],
+      "usage": "Mix 1 scoop (35g) with 250-300ml of water or milk before bed.",
+      "available": true,
+      "featured": false,
+      "flavors": [
+        "Vanilla"
+      ]
+    },
+    {
+      "id": "prod-004",
+      "name": "Creatine Monohydrate 500g",
+      "slug": "creatine-monohydrate-500g",
+      "categoryId": "creatine",
+      "price": 3200,
+      "oldPrice": null,
+      "currency": "DZD",
+      "image": "assets/images/products/creatine.jpg",
+      "shortDescription": "Pure micronized creatine monohydrate, unflavored.",
+      "description": "A straightforward, unflavored creatine monohydrate that can be added to any drink or shake. One of the most studied supplements for strength training.",
+      "benefits": [
+        "5g of pure creatine per scoop",
+        "Unflavored - mixes with anything",
+        "500g / ~100 servings"
+      ],
+      "usage": "Take 1 scoop (5g) daily, any time of day, with water or in a shake.",
+      "available": true,
+      "featured": true,
+      "flavors": [
+        "Unflavored"
+      ]
+    },
+    {
+      "id": "prod-005",
+      "name": "Mass Gainer 5kg",
+      "slug": "mass-gainer-5kg",
+      "categoryId": "mass-gainers",
+      "price": 7200,
+      "oldPrice": 8000,
+      "currency": "DZD",
+      "image": "assets/images/products/mass-gainer.jpg",
+      "shortDescription": "High-calorie shake for those struggling to gain weight.",
+      "description": "A calorie-dense blend of protein and carbohydrates for people who need extra calories to support size and strength goals.",
+      "benefits": [
+        "Over 1000 kcal per serving",
+        "50g of protein per serving",
+        "Added vitamins and minerals"
+      ],
+      "usage": "Mix 2-3 scoops with 400-500ml of milk or water, 1-2 times per day between meals.",
+      "available": true,
+      "featured": false,
+      "flavors": [
+        "Chocolate",
+        "Vanilla"
+      ]
+    },
+    {
+      "id": "prod-006",
+      "name": "Multivitamin Complete",
+      "slug": "multivitamin-complete",
+      "categoryId": "vitamins",
+      "price": 2400,
+      "oldPrice": null,
+      "currency": "DZD",
+      "image": "assets/images/products/multivitamin.jpg",
+      "shortDescription": "Daily multivitamin covering 12 essential vitamins.",
+      "description": "A once-daily tablet formulated to help fill common gaps in a busy or restrictive diet.",
+      "benefits": [
+        "12 essential vitamins",
+        "One tablet a day",
+        "60-day supply"
+      ],
+      "usage": "Take 1 tablet daily with a meal.",
+      "available": true,
+      "featured": true,
+      "flavors": []
+    },
+    {
+      "id": "prod-007",
+      "name": "Vitamin D3 + K2",
+      "slug": "vitamin-d3-k2",
+      "categoryId": "vitamins",
+      "price": 1800,
+      "oldPrice": null,
+      "currency": "DZD",
+      "image": "assets/images/products/vitamin-d3.jpg",
+      "shortDescription": "Vitamin D3 with K2, in easy-to-swallow softgels.",
+      "description": "A combined D3/K2 softgel, useful for people who get limited sun exposure throughout the year.",
+      "benefits": [
+        "2000 IU of D3 per softgel",
+        "Added K2 (MK-7)",
+        "90 softgels"
+      ],
+      "usage": "Take 1 softgel daily with a meal containing fat.",
+      "available": true,
+      "featured": false,
+      "flavors": []
+    },
+    {
+      "id": "prod-008",
+      "name": "ZMA Zinc & Magnesium",
+      "slug": "zma-zinc-magnesium",
+      "categoryId": "minerals",
+      "price": 2600,
+      "oldPrice": null,
+      "currency": "DZD",
+      "image": "assets/images/products/zma.jpg",
+      "shortDescription": "Zinc, magnesium and B6, taken before bed.",
+      "description": "A well-known combination of zinc, magnesium and vitamin B6 in capsule form, typically taken in the evening.",
+      "benefits": [
+        "Zinc + Magnesium + B6",
+        "3 capsules per serving",
+        "Non-drowsy formula"
+      ],
+      "usage": "Take 3 capsules 30-60 minutes before bed, ideally on an empty stomach.",
+      "available": true,
+      "featured": false,
+      "flavors": []
+    },
+    {
+      "id": "prod-009",
+      "name": "Magnesium Glycinate",
+      "slug": "magnesium-glycinate",
+      "categoryId": "minerals",
+      "price": 2100,
+      "oldPrice": 2500,
+      "currency": "DZD",
+      "image": "assets/images/products/magnesium.jpg",
+      "shortDescription": "A gentler, well-absorbed form of magnesium.",
+      "description": "Magnesium bound to glycine, chosen by people who find other forms of magnesium harsh on the stomach.",
+      "benefits": [
+        "High-absorption chelate form",
+        "Gentle on digestion",
+        "90 capsules"
+      ],
+      "usage": "Take 2 capsules daily, with or without food.",
+      "available": true,
+      "featured": false,
+      "flavors": []
+    },
+    {
+      "id": "prod-010",
+      "name": "Pre-Workout Extreme",
+      "slug": "pre-workout-extreme",
+      "categoryId": "pre-workout",
+      "price": 4500,
+      "oldPrice": 5200,
+      "currency": "DZD",
+      "image": "assets/images/products/pre-workout.jpg",
+      "shortDescription": "Energy, focus and pump before your session.",
+      "description": "A pre-training formula combining caffeine with common pump and focus ingredients. Contains stimulants - not recommended late in the day.",
+      "benefits": [
+        "200mg caffeine per serving",
+        "Added citrulline for pump",
+        "30 servings per tub"
+      ],
+      "usage": "Mix 1 scoop with 200-300ml of water, 20-30 minutes before training. Avoid taking after 4pm.",
+      "available": true,
+      "featured": true,
+      "flavors": [
+        "Blue Raspberry",
+        "Fruit Punch"
+      ]
+    },
+    {
+      "id": "prod-011",
+      "name": "BCAA 2:1:1",
+      "slug": "bcaa-2-1-1",
+      "categoryId": "amino-acids",
+      "price": 3800,
+      "oldPrice": null,
+      "currency": "DZD",
+      "image": "assets/images/products/bcaa.jpg",
+      "shortDescription": "Branched-chain amino acids in the classic 2:1:1 ratio.",
+      "description": "A BCAA powder in the standard 2:1:1 ratio, often taken during or around training sessions.",
+      "benefits": [
+        "7g of BCAAs per serving",
+        "2:1:1 leucine ratio",
+        "30 servings"
+      ],
+      "usage": "Mix 1 scoop with 300-400ml of water, sipped during training.",
+      "available": true,
+      "featured": false,
+      "flavors": [
+        "Watermelon",
+        "Lemon"
+      ]
+    },
+    {
+      "id": "prod-012",
+      "name": "L-Glutamine",
+      "slug": "l-glutamine",
+      "categoryId": "amino-acids",
+      "price": 3300,
+      "oldPrice": null,
+      "currency": "DZD",
+      "image": "assets/images/products/glutamine.jpg",
+      "shortDescription": "Unflavored glutamine powder for daily use.",
+      "description": "A simple, unflavored glutamine powder that can be added to a shake or drink at any point in the day.",
+      "benefits": [
+        "5g per scoop",
+        "Unflavored",
+        "Easily added to any shake"
+      ],
+      "usage": "Mix 1 scoop (5g) with water or add to your regular shake, once or twice daily.",
+      "available": true,
+      "featured": false,
+      "flavors": [
+        "Unflavored"
+      ]
+    },
+    {
+      "id": "prod-013",
+      "name": "Fat Burner Thermo",
+      "slug": "fat-burner-thermo",
+      "categoryId": "fat-burners",
+      "price": 4200,
+      "oldPrice": null,
+      "currency": "DZD",
+      "image": "assets/images/products/fat-burner.jpg",
+      "shortDescription": "A stimulant-based capsule for cutting phases.",
+      "description": "A thermogenic capsule intended to be used alongside a calorie-controlled diet and regular training, not as a replacement for either.",
+      "benefits": [
+        "Contains caffeine and green tea extract",
+        "2 capsules per serving",
+        "60 capsules"
+      ],
+      "usage": "Take 2 capsules in the morning with food. Do not exceed 2 servings per day.",
+      "available": true,
+      "featured": false,
+      "flavors": []
+    },
+    {
+      "id": "prod-014",
+      "name": "Omega 3 Fish Oil",
+      "slug": "omega-3-fish-oil",
+      "categoryId": "wellness",
+      "price": 2900,
+      "oldPrice": null,
+      "currency": "DZD",
+      "image": "assets/images/products/omega-3.jpg",
+      "shortDescription": "Fish oil softgels with EPA and DHA.",
+      "description": "A everyday fish oil supplement to help fill gaps for people who don't eat oily fish regularly.",
+      "benefits": [
+        "1000mg fish oil per softgel",
+        "EPA + DHA",
+        "90 softgels"
+      ],
+      "usage": "Take 1-2 softgels daily with a meal.",
+      "available": true,
+      "featured": false,
+      "flavors": []
+    },
+    {
+      "id": "prod-015",
+      "name": "Electrolyte Hydration Mix",
+      "slug": "electrolyte-hydration-mix",
+      "categoryId": "wellness",
+      "price": 2200,
+      "oldPrice": null,
+      "currency": "DZD",
+      "image": "assets/images/products/electrolytes.jpg",
+      "shortDescription": "A light electrolyte mix for training in the heat.",
+      "description": "A low-sugar electrolyte powder for topping up sodium, potassium and magnesium during long or hot training sessions.",
+      "benefits": [
+        "Sodium, potassium and magnesium",
+        "Light, refreshing taste",
+        "20 servings"
+      ],
+      "usage": "Mix 1 scoop with 500ml of water before, during or after training.",
+      "available": true,
+      "featured": false,
+      "flavors": [
+        "Lemon",
+        "Orange"
+      ]
+    },
+    {
+      "id": "prod-016",
+      "name": "Shaker Bottle 700ml",
+      "slug": "shaker-bottle-700ml",
+      "categoryId": "accessories",
+      "price": 900,
+      "oldPrice": null,
+      "currency": "DZD",
+      "image": "assets/images/products/shaker.jpg",
+      "shortDescription": "Leak-proof shaker with mixing ball, 700ml.",
+      "description": "A durable 700ml shaker bottle with a stainless steel mixing ball, for lump-free shakes on the go.",
+      "benefits": [
+        "700ml capacity",
+        "Includes mixing ball",
+        "Leak-proof lid"
+      ],
+      "usage": "",
+      "available": true,
+      "featured": true,
+      "flavors": []
+    }
+  ]
+}
